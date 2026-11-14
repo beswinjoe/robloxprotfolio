@@ -1,53 +1,50 @@
 import React from "react";
+import { Gamepad2, Layers, Code2, DollarSign } from "lucide-react";
 import { PORTFOLIO_STATS } from "@/data/portfolioData";
-import { ShieldCheck, Coins, Gamepad2, Users, Code2 } from "lucide-react";
 
 export const Stats: React.FC = () => {
   const getIcon = (idx: number) => {
     switch (idx) {
       case 0:
-        return <Coins className="h-5 w-5 text-amber-400" />;
+        return <Gamepad2 className="h-6 w-6 text-slate-800" />;
       case 1:
-        return <Gamepad2 className="h-5 w-5 text-[#00a2ff]" />;
+        return <Layers className="h-6 w-6 text-slate-800" />;
       case 2:
-        return <Users className="h-5 w-5 text-emerald-400" />;
+        return <Code2 className="h-6 w-6 text-slate-800" />;
       case 3:
-        return <Code2 className="h-5 w-5 text-[#e2b053]" />;
+        return <DollarSign className="h-6 w-6 text-slate-800" />;
     }
   };
 
   return (
-    <section className="border-y border-[#202025] bg-[#121215] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {PORTFOLIO_STATS.map((stat, idx) => (
-            <div
-              key={idx}
-              className="group relative rounded-2xl border border-[#242429] bg-[#16161b] p-6 transition-all duration-300 hover:border-[#383844] hover:bg-[#1a1a20]"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <span className="p-2 rounded-xl bg-[#1f1f28] border border-[#2a2a35]">
-                  {getIcon(idx)}
-                </span>
-                <span className="rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-mono font-bold">
-                  {stat.verifiedStatus}
-                </span>
-              </div>
+    <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-b border-gray-100 my-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+        {PORTFOLIO_STATS.map((stat, idx) => (
+          <div
+            key={stat.label}
+            className={`flex items-center gap-4 ${
+              idx > 0 ? "pt-6 md:pt-0 md:pl-8" : ""
+            }`}
+          >
+            {/* Icon */}
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gray-50 border border-gray-100 text-slate-800 shadow-2xs">
+              {getIcon(idx)}
+            </div>
 
-              <div className="text-3xl sm:text-4xl font-black font-sans tracking-tight text-white group-hover:text-emerald-400 transition-colors">
+            {/* Numbers & Labels */}
+            <div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-slate-950 font-sans tracking-tight">
                 {stat.value}
               </div>
-
-              <div className="mt-1 text-xs font-bold font-mono uppercase text-[#a1a1aa] tracking-wider">
+              <div className="text-xs font-semibold text-slate-700 tracking-tight">
                 {stat.label}
               </div>
-
-              <p className="mt-2 text-xs text-[#71717a] leading-normal font-sans">
+              <div className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">
                 {stat.subtext}
-              </p>
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -7,12 +7,9 @@ import {
   CheckCircle2,
   ChevronDown,
   ChevronUp,
-  Cpu,
   Terminal,
   Copy,
   Check,
-  Shield,
-  Layers,
 } from "lucide-react";
 
 export const DevelopmentSection: React.FC = () => {
@@ -32,18 +29,18 @@ export const DevelopmentSection: React.FC = () => {
   };
 
   return (
-    <section id="development" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#1e1e23]">
+    <section id="development" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100">
       {/* Header */}
       <div className="mb-12">
-        <div className="flex items-center gap-2 text-xs font-mono text-[#e2b053] font-bold uppercase tracking-wider mb-2">
+        <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-rose-600 mb-2">
           <Terminal className="h-4 w-4" />
-          <span>ROBLOX LUAU GAMEPLAY SCRIPTER</span>
+          <span>ROBLOX LUAU DEVELOPMENT</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white font-sans">
-          Gameplay Systems & Development
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950 font-sans">
+          Gameplay Scripting & Systems
         </h2>
-        <p className="mt-2 max-w-2xl text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
-          I design and script core Roblox mechanics: server-authoritative combat, custom locomotion physics, and atomic data persistence.
+        <p className="mt-2 max-w-2xl text-base text-slate-600 leading-relaxed font-normal">
+          Contributions to 2–3 Roblox games focusing on server-authoritative combat logic, physics-driven character controllers, and match state management.
         </p>
       </div>
 
@@ -52,48 +49,48 @@ export const DevelopmentSection: React.FC = () => {
         {SCRIPTING_PROJECTS.map((project, index) => (
           <article
             key={project.id}
-            className="rounded-2xl border border-[#232328] bg-[#141418] p-6 lg:p-8 transition-all hover:border-[#383844]"
+            className="rounded-3xl border border-gray-200/90 bg-white p-7 sm:p-8 shadow-xs hover:shadow-lg hover:border-gray-300 transition-all duration-300"
           >
             <div className="space-y-6">
               {/* Top Bar: Title & Status */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#222228] pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-100 pb-5">
                 <div>
-                  <div className="font-mono text-xs text-[#e2b053] font-bold mb-1">
-                    0{index + 1} // LUAU ARCHITECTURE
+                  <div className="text-xs font-bold font-mono text-rose-600 uppercase mb-1">
+                    0{index + 1} // SCRIPTING CONTRIBUTION
                   </div>
-                  <h3 className="text-2xl font-black text-white tracking-tight">
+                  <h3 className="text-2xl font-black text-slate-950 tracking-tight">
                     {project.title}
                   </h3>
-                  <p className="text-sm font-medium text-[#a1a1aa] mt-0.5">
+                  <p className="text-sm font-medium text-slate-500 mt-0.5">
                     {project.subtitle}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <span className="rounded-lg border border-[#2e2e38] bg-[#1c1c24] px-3 py-1 font-mono text-xs text-white font-semibold">
+                <div>
+                  <span className="rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
                     {project.projectStatus}
                   </span>
                 </div>
               </div>
 
               {/* Contribution Description */}
-              <p className="text-sm text-[#cbd5e1] leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 {project.contribution}
               </p>
 
               {/* Systems Scripted Grid */}
               <div>
-                <h4 className="text-xs font-mono uppercase tracking-wider text-[#71717a] font-bold mb-3">
-                  Key Systems Engineered
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-3">
+                  Systems Scripted
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {project.systemsScripted.map((sys, sIdx) => (
                     <div
                       key={sIdx}
-                      className="flex items-start gap-2.5 rounded-xl bg-[#181820] p-3 border border-[#24242d]"
+                      className="flex items-start gap-2.5 rounded-2xl bg-gray-50/80 p-3.5 border border-gray-100"
                     >
-                      <CheckCircle2 className="h-4 w-4 shrink-0 text-[#e2b053] mt-0.5" />
-                      <span className="text-xs leading-snug text-[#d1d5db]">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-600 mt-0.5" />
+                      <span className="text-xs sm:text-sm leading-snug text-slate-700">
                         {sys}
                       </span>
                     </div>
@@ -103,11 +100,11 @@ export const DevelopmentSection: React.FC = () => {
 
               {/* Technologies Pills */}
               <div className="flex flex-wrap items-center gap-2 pt-1">
-                <span className="text-xs font-mono text-[#71717a] mr-1">Stack:</span>
+                <span className="text-xs font-semibold text-slate-400 mr-1">Stack:</span>
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-lg border border-[#2b2b36] bg-[#18181f] px-2.5 py-1 font-mono text-xs text-[#d4d4d8]"
+                    className="rounded-lg border border-gray-200 bg-gray-50 px-2.5 py-1 font-mono text-xs text-slate-700"
                   >
                     {tech}
                   </span>
@@ -116,18 +113,18 @@ export const DevelopmentSection: React.FC = () => {
 
               {/* Code Snippet Box */}
               {project.codeSnippetPreview && (
-                <div className="rounded-xl border border-[#262630] bg-[#0c0c10] overflow-hidden">
-                  <div className="flex items-center justify-between px-4 py-2.5 bg-[#17171e] border-b border-[#23232c]">
+                <div className="rounded-2xl border border-gray-200 bg-slate-950 text-slate-100 overflow-hidden shadow-sm">
+                  <div className="flex items-center justify-between px-5 py-3 bg-slate-900 border-b border-slate-800">
                     <button
                       onClick={() => toggleCode(project.id)}
-                      className="flex items-center gap-2 text-xs font-mono font-bold text-white hover:text-[#e2b053] transition-colors"
+                      className="flex items-center gap-2 text-xs font-mono font-bold text-slate-200 hover:text-white transition-colors"
                     >
-                      <Code2 className="h-4 w-4 text-[#e2b053]" />
+                      <Code2 className="h-4 w-4 text-rose-400" />
                       <span>{project.codeSnippetPreview.filename}</span>
                       {expandedCodeId === project.id ? (
-                        <ChevronUp className="h-3.5 w-3.5 text-[#71717a]" />
+                        <ChevronUp className="h-3.5 w-3.5 text-slate-400" />
                       ) : (
-                        <ChevronDown className="h-3.5 w-3.5 text-[#71717a]" />
+                        <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
                       )}
                     </button>
 
@@ -138,7 +135,7 @@ export const DevelopmentSection: React.FC = () => {
                           project.codeSnippetPreview!.code
                         )
                       }
-                      className="flex items-center gap-1.5 rounded-md border border-[#2c2c38] bg-[#1d1d26] px-2.5 py-1 text-[11px] font-mono text-[#d4d4d8] hover:bg-[#282834] transition-colors"
+                      className="flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-2.5 py-1 text-[11px] font-mono text-slate-200 hover:bg-slate-700 transition-colors"
                     >
                       {copiedId === project.id ? (
                         <>
@@ -147,7 +144,7 @@ export const DevelopmentSection: React.FC = () => {
                         </>
                       ) : (
                         <>
-                          <Copy className="h-3 w-3 text-[#9ca3af]" />
+                          <Copy className="h-3 w-3 text-slate-400" />
                           <span>Copy Luau</span>
                         </>
                       )}
@@ -155,11 +152,11 @@ export const DevelopmentSection: React.FC = () => {
                   </div>
 
                   {expandedCodeId === project.id && (
-                    <div className="p-4 space-y-3">
-                      <pre className="overflow-x-auto text-[11px] font-mono text-[#a1a1aa] leading-relaxed bg-[#08080a] p-4 rounded-lg border border-[#1b1b22]">
+                    <div className="p-5 space-y-3">
+                      <pre className="overflow-x-auto text-[11px] font-mono text-slate-300 leading-relaxed bg-black/60 p-4 rounded-xl border border-slate-800/80">
                         <code>{project.codeSnippetPreview.code}</code>
                       </pre>
-                      <p className="text-xs text-[#8e8e93] font-mono">
+                      <p className="text-xs text-slate-400 font-mono">
                         💡 {project.codeSnippetPreview.explanation}
                       </p>
                     </div>

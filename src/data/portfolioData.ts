@@ -10,47 +10,111 @@ export const PORTFOLIO_HERO = {
   name: "Beswin Joe",
   username: "beswinjee",
   role: "Roblox Developer & QA Tester",
+  website: "beswinjoe.me/roblox",
   tagline:
-    "I build gameplay systems, test game experiences and help developers deliver better Roblox games.",
-  availability: "Available for select QA testing & Luau scripting contracts",
-  location: "Remote / Global",
-  specialization: "Luau Gameplay Architecture • Regression QA • Bug Diagnostics",
+    "I script gameplay systems, test game experiences, identify bugs and help developers improve their Roblox games.",
+  headline: "I build and test",
+  headlineAccent: "Roblox games.",
+  availability: "Available for QA testing & Luau scripting",
 };
 
 export const PORTFOLIO_STATS: PortfolioStatistic[] = [
   {
-    label: "Total Robux Earned",
-    value: "10K+ R$",
-    subtext: "Verified earnings from paid QA testing & Luau development",
+    label: "Games Tested",
+    value: "15",
+    subtext: "Deduplicated testing records",
+    verifiedStatus: "Documented",
+  },
+  {
+    label: "Paid Tests",
+    value: "9",
+    subtext: "Documented studio QA contracts",
     verifiedStatus: "Verified",
   },
   {
-    label: "Games Tested",
-    value: "15+",
-    subtext: "Paid studio contracts, voluntary audits & QA Central archive",
+    label: "Games Assisted",
+    value: "2–3",
+    subtext: "Gameplay systems & scripting",
     verifiedStatus: "Documented",
   },
   {
-    label: "Lifetime Visits Reach",
-    value: "250M+",
-    subtext: "Accumulated visits across audited and assisted experiences",
-    verifiedStatus: "Audited",
+    label: "Verified Earnings",
+    value: "$3+",
+    subtext: "Buy Me a Coffee supporter earnings",
+    verifiedStatus: "Verified",
+  },
+];
+
+export const GALLERY_GAMES = [
+  {
+    title: "Run a Dry Cleaner!",
+    studio: "Playmade",
+    image: "/games/run-a-dry-cleaner.jpg",
+    category: "Paid Studio QA",
   },
   {
-    label: "Gameplay Systems Scripted",
-    value: "3 Systems",
-    subtext: "Melee combat, locomotion physics & match state machines",
-    verifiedStatus: "Documented",
+    title: "Miami Crime RP [BETA]",
+    studio: "Blox Star Games",
+    image: "/games/miami-crime-rp.jpg",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "Don't Wake Up The Baby",
+    studio: "Lamp Studios!",
+    image: "/games/dont-wake-up-the-baby.jpg",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "Duck Dominion [ALPHA]",
+    studio: "Winter Wolves Studios",
+    image: "/games/duck-dominion.jpg",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "Cooked 🍳 [DEV]",
+    studio: "lol just cooking",
+    image: "/games/cooked.jpg",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "The Update Game",
+    studio: "The Woods Company",
+    image: "/games/the-update-game.jpg",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "+1 Ninja Leveling",
+    studio: "Hidden Ninja World",
+    image: "/games/ninja-leveling.jpg",
+    category: "Community QA",
+  },
+  {
+    title: "[🎃 GIANT CROPS] Become the Farmer 🌾",
+    studio: "@ozeafh394",
+    image: "/games/become-the-farmer.jpg",
+    category: "QA Central Voluntary",
+  },
+  {
+    title: "[🌊 UPD] Catch a Sea Monster",
+    studio: "Like & Join For Rewards",
+    image: "/games/catch-a-sea-monster.png",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "Hitman's Days",
+    studio: "@NoobyRequiem",
+    image: "/games/hitmans-days.png",
+    category: "QA Central Voluntary",
   },
 ];
 
 export const SCRIPTING_PROJECTS: ScriptingProject[] = [
   {
     id: "proj-01-core-combat",
-    title: "Server-Authoritative Combat Engine",
-    subtitle: "Raycast Sub-stepping & Client Prediction Layer",
+    title: "Server-Authoritative Combat Architecture",
+    subtitle: "Raycast Hitbox Sub-stepping & Client Prediction",
     contribution:
-      "Engineered the client-server melee combat architecture, server-authoritative raycast hitbox validation, and network replication layer to prevent reach hacks and hit registration desync.",
+      "Engineered the client-server melee combat architecture, server-authoritative raycast hitbox validation, and network replication layer to prevent reach exploits and hit desynchronization.",
     systemsScripted: [
       "Spatial hit-box detection with raycast sub-stepping to prevent tunneling at high ping",
       "Client-predicted attack animations with server rollback & sanity checks",
@@ -67,7 +131,7 @@ export const SCRIPTING_PROJECTS: ScriptingProject[] = [
     ],
     developmentDetails:
       "Designed to maintain responsiveness under 150ms+ latency conditions. Integrated server-side cooldown timers and distance verification to eliminate exploitable client-fired remote events.",
-    projectStatus: "Core Systems Architecture",
+    projectStatus: "Core Gameplay Architecture",
     isPlaceholderNotice: true,
     image: "/games/featured-showcase.jpg",
     codeSnippetPreview: {
@@ -106,15 +170,15 @@ return HitboxService`,
         "Sanitizes combat hit inputs on the server using position delta checks, reach limits, and attribute state guards to reject malicious remote events.",
     },
     metrics: [
-      { label: "Hit Registration", value: "Server-Validated" },
+      { label: "Hit Validation", value: "Server-Authoritative" },
       { label: "Sub-stepping", value: "60 Hz Raycast" },
-      { label: "Anti-Exploit", value: "Distance Clamped" },
+      { label: "Latency Feel", value: "Client Predicted" },
     ],
   },
   {
     id: "proj-02-movement-physics",
-    title: "Dynamic Locomotion & Parkour Controller",
-    subtitle: "Custom Physics, Ledge Detection & Bezier Vaulting",
+    title: "Locomotion & Parkour Physics Controller",
+    subtitle: "Custom Character Movement & Bezier Vaulting",
     contribution:
       "Architected custom character movement mechanics including ledge-grabbing, momentum-preserving sliding, and dynamic vaulting over obstacles without humanoid physics jitter.",
     systemsScripted: [
@@ -133,7 +197,7 @@ return HitboxService`,
     ],
     developmentDetails:
       "Eliminated default Roblox humanoid physics jitter on stepped surfaces by transitioning the character to a custom physics state while sliding. Implemented input buffering so players can queue wall climbs and vaults smoothly.",
-    projectStatus: "Locomotion Module",
+    projectStatus: "Movement Systems Module",
     isPlaceholderNotice: true,
     image: "/games/featured-showcase.jpg",
     codeSnippetPreview: {
@@ -162,15 +226,15 @@ end`,
         "Two-stage raycast calculation detecting both the obstacle face normal and the top ledge landing position for procedural vaulting.",
     },
     metrics: [
-      { label: "Physics Calculations", value: "Multi-ray Step" },
-      { label: "Latency Feel", value: "Client-Predicted" },
-      { label: "Controller Support", value: "PC & Gamepad" },
+      { label: "Raycast Checks", value: "Multi-Point Step" },
+      { label: "Controls", value: "Keyboard & Gamepad" },
+      { label: "Transitions", value: "CFrame Bezier" },
     ],
   },
   {
     id: "proj-03-session-lifecycle",
     title: "Round Lifecycle & Data Persistence Framework",
-    subtitle: "State Machine Transitions & Session-Locked Saves",
+    subtitle: "State Machine Synchronization & Session Locks",
     contribution:
       "Built the round lifecycle state machine (Lobby -> Intermission -> Match -> Post-Match) alongside atomic session-locked DataStore persistence guarding against item write duplication bugs.",
     systemsScripted: [
@@ -220,8 +284,8 @@ end`,
     },
     metrics: [
       { label: "Data Integrity", value: "Session-Locked" },
-      { label: "Modularity", value: "Pluggable Modes" },
-      { label: "State Sync", value: "Deterministic FSM" },
+      { label: "State Transitions", value: "Deterministic FSM" },
+      { label: "Replication", value: "Lightweight Payload" },
     ],
   },
 ];
@@ -237,7 +301,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 11,
     dislikes: 3,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/run-a-dry-cleaner.jpg",
     testingSummary:
       "Evaluated tycoon progression curves, conveyor belt physics reliability, NPC order fulfillment queues, and multi-tier equipment upgrade economy math.",
@@ -263,7 +327,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 42,
     dislikes: 16,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/miami-crime-rp.jpg",
     testingSummary:
       "Conducted vehicle handling testing, weapon hit registration in dense urban zones, job payout balance, and door/building collision breach vulnerability testing.",
@@ -289,7 +353,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 18,
     dislikes: 4,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/dont-wake-up-the-baby.jpg",
     testingSummary:
       "Investigated stealth detection radii, noise meter threshold accumulation, sound trigger responsiveness, and progression checkpoint triggers in cooperative play.",
@@ -315,7 +379,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 31,
     dislikes: 7,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/duck-dominion.jpg",
     testingSummary:
       "Tested early alpha systems, unit flocking pathfinding, base upgrades, territory capture flag calculations, and multiplayer server replication stability.",
@@ -341,7 +405,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 0,
     dislikes: 0,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/cooked.jpg",
     testingSummary:
       "Rigorous multiplayer co-op kitchen testing: ingredient interaction states, cooking timers, fire spread logic, and cross-player item handoffs under variable ping.",
@@ -367,7 +431,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 8,
     dislikes: 2,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/the-update-game.jpg",
     testingSummary:
       "Tested weekly content update features, quest completion trigger debounce, dynamic event spawns, and mobile UI responsiveness across varying aspect ratios.",
@@ -393,7 +457,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 4,
     dislikes: 0,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/catch-a-sea-monster.png",
     testingSummary:
       "Focused on fishing rod minigame mechanics, water physics raycasting, monster AI aggregation behavior in deep-water zones, and equipment inventory persistence.",
@@ -419,7 +483,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 54,
     dislikes: 8,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/featured-showcase.jpg",
     testingSummary:
       "Conducted extensive trajectory physics stress testing, multiplayer cannon queue synchronization, and projectile collision boundary validation across multiple server population loads.",
@@ -445,7 +509,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 29,
     dislikes: 5,
     category: "Paid Testing",
-    testingDate: "Confirmed Paid QA",
+    testingDate: "Paid Studio QA",
     image: "/games/featured-showcase.jpg",
     testingSummary:
       "Evaluated sandbox creation limits, object placement collision detection, save/load slot integrity for large world builds, and memory consumption during continuous sandbox expansion.",
@@ -473,7 +537,7 @@ export const QA_RECORDS: QARecord[] = [
     likes: 24,
     dislikes: 1,
     category: "Unverified / Pending Audit",
-    testingDate: "Documented QA Test",
+    testingDate: "Community QA",
     image: "/games/ninja-leveling.jpg",
     testingSummary:
       "Evaluated stat allocation responsiveness, training ground XP multipliers, skill cooldown reset glitches, and leaderboard ranking accuracy.",
@@ -808,38 +872,26 @@ export const BUG_REPORTS: BugReport[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    title: "Gameplay Testing",
+    title: "Development",
     description:
-      "Core game-feel, mechanical stress analysis, and multiplayer edge-case validation.",
+      "Technical proficiency in Roblox game architecture, scripting, and engine tooling.",
     skills: [
       {
-        name: "Hitbox & Hit Detection",
+        name: "Roblox Studio",
         description:
-          "Verifying raycast sub-stepping, spatial bounds, lag compensation, and latency desynchronization in real combat scenarios.",
+          "In-depth command of Studio tools, Explorer hierarchy, Physics analyzer, MicroProfiler, and Developer Console.",
         level: "Core",
       },
       {
-        name: "Multiplayer Functionality",
+        name: "Luau Scripting",
         description:
-          "Stress testing high player concurrency, race conditions, atomic item claims, and server-client state divergence.",
+          "Writing type-checked, performant Luau code with modern syntax, modular structures, and clean API boundaries.",
         level: "Advanced",
       },
       {
-        name: "Gameplay Mechanics",
+        name: "Gameplay Systems",
         description:
-          "Evaluating rule adherence, game balance pacing, mini-game precision, input buffering, and player friction points.",
-        level: "Core",
-      },
-      {
-        name: "Physics & Movement",
-        description:
-          "Detecting tunneling at high velocities, collision seam breaches, vehicle constraint stability, and ragdoll recovery.",
-        level: "Advanced",
-      },
-      {
-        name: "Progression Systems",
-        description:
-          "Auditing economy progression curves, XP multipliers, upgrade math tables, and quest completion triggers.",
+          "Architecting server-authoritative state machines, round lifecycles, weapon handlers, and clean remote communication.",
         level: "Proficient",
       },
     ],
@@ -850,59 +902,40 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       "Systematic defect discovery, clear documentation, and developer-aligned diagnostics.",
     skills: [
       {
+        name: "Gameplay Testing",
+        description:
+          "Evaluating rule adherence, game balance pacing, mini-game precision, input buffering, and player friction points.",
+        level: "Core",
+      },
+      {
         name: "Bug Identification",
         description:
           "Spotting subtle mechanical glitches, memory leaks, security oversights, and unhandled edge conditions before public release.",
         level: "Advanced",
       },
       {
-        name: "Reproduction Steps",
+        name: "Bug Reproduction",
         description:
           "Formulating concise, deterministic, 100% reproducible step-by-step reports with isolated test parameters.",
         level: "Core",
       },
       {
-        name: "Regression Testing",
+        name: "Multiplayer Testing",
         description:
-          "Systematically re-verifying resolved issues across weekly live-ops patches to prevent bug reoccurrence.",
-        level: "Core",
+          "Stress testing high player concurrency, race conditions, atomic item claims, and server-client state divergence.",
+        level: "Advanced",
       },
       {
-        name: "UI/UX Testing",
+        name: "UI Testing",
         description:
           "Evaluating mobile safe-area insets, aspect ratio scaling, touch button accessibility, and visual hierarchy under pressure.",
         level: "Proficient",
       },
       {
-        name: "Gameplay Feedback",
+        name: "Hitbox & Physics Testing",
         description:
-          "Delivering actionable, constructive design feedback focused on player retention, onboarding clarity, and session pacing.",
-        level: "Core",
-      },
-    ],
-  },
-  {
-    title: "Development",
-    description:
-      "Technical proficiency in Roblox game architecture, scripting, and engine tooling.",
-    skills: [
-      {
-        name: "Luau Scripting",
-        description:
-          "Writing type-checked, performant Luau code with modern syntax, modular structures, and clean API boundaries.",
-        level: "Proficient",
-      },
-      {
-        name: "Roblox Studio",
-        description:
-          "In-depth command of Studio tools, Explorer hierarchy, Physics analyzer, MicroProfiler, and Developer Console.",
-        level: "Core",
-      },
-      {
-        name: "Gameplay Systems",
-        description:
-          "Architecting server-authoritative state machines, round lifecycles, weapon handlers, and clean remote communication.",
-        level: "Proficient",
+          "Verifying raycast sub-stepping, spatial bounds, lag compensation, tunneling at high velocities, and seam breaches.",
+        level: "Advanced",
       },
     ],
   },

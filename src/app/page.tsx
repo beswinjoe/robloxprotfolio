@@ -1,10 +1,11 @@
 import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { GameGalleryCarousel } from "@/components/GameGalleryCarousel";
 import { Stats } from "@/components/Stats";
-import { DevelopmentSection } from "@/components/DevelopmentSection";
 import { QATestingSection } from "@/components/QATestingSection";
 import { BugReportSystem } from "@/components/BugReportSystem";
+import { DevelopmentSection } from "@/components/DevelopmentSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -12,38 +13,40 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#101010] text-[#ededed] antialiased">
-      {/* Top sticky navigation */}
+    <div className="relative min-h-screen bg-white text-slate-900 antialiased selection:bg-rose-500 selection:text-white">
+      {/* 1. Slim White Sticky Navigation */}
       <Navbar />
 
-      {/* Main page content sections */}
       <main className="relative">
-        {/* 1. Hero Section */}
+        {/* 2. Two-Column Editorial Hero Section */}
         <Hero />
 
-        {/* 2. Audited Statistics */}
+        {/* 3. Horizontal Continuous Animated Game Gallery Carousel */}
+        <GameGalleryCarousel />
+
+        {/* 4. Minimal Statistics Section with Verified Disclosures */}
         <Stats />
 
-        {/* 3. Development Portfolio (Scripting contributions) */}
-        <DevelopmentSection />
-
-        {/* 4. QA Testing Portfolio (Filterable records: Paid, QA Central, Pending Verification) */}
+        {/* 5. QA Testing Portfolio (Paid Studio QA, QA Central Archive, Additional Records) */}
         <QATestingSection />
 
-        {/* 5. Bug Reports & QA Case Studies System */}
+        {/* 6. Documented Bug Reports & Reproducible Case Studies */}
         <BugReportSystem />
 
-        {/* 6. QA & Development Skills Matrices */}
+        {/* 7. Luau Gameplay Scripting & Systems Development */}
+        <DevelopmentSection />
+
+        {/* 8. Technical Skills Matrix */}
         <SkillsSection />
 
-        {/* 7. Methodology & About */}
+        {/* 9. Background & Methodology */}
         <AboutSection />
 
-        {/* 8. Contact & Collaboration */}
+        {/* 10. Contact & Engagement Inquiry */}
         <ContactSection />
       </main>
 
-      {/* Global Footer */}
+      {/* 11. Minimal Footer */}
       <Footer />
     </div>
   );
