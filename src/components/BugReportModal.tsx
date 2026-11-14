@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { BugReport } from "@/types/portfolio";
-import { RobloxGameFrame } from "@/components/illustrations/RobloxGameFrame";
 import {
   X,
   AlertOctagon,
@@ -133,17 +133,24 @@ Suggested Improvement: ${report.suggestedImprovement}`;
           <div>
             <div className="flex items-center justify-between text-xs font-mono text-[#71717a] mb-2">
               <span className="uppercase tracking-wider">
-                Telemetry & Defect Reproduction Frame
+                Defect Evidence & Screen Capture
               </span>
-              <span>Evidence Type: {report.evidenceType.toUpperCase()}</span>
+              <span>Type: {report.evidenceType.toUpperCase()}</span>
             </div>
-            <RobloxGameFrame
-              gameName={report.game}
-              gameId={report.id}
-              bugId={report.id}
-              category={report.category}
-              aspectRatio="video"
-            />
+            {report.image ? (
+              <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-[#272730] bg-[#0c0c10]">
+                <Image
+                  src={report.image}
+                  alt={report.bugTitle}
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+                <div className="absolute top-3 left-3 rounded-md bg-black/80 px-2.5 py-1 text-[11px] font-mono text-red-400 border border-red-500/30 backdrop-blur-md">
+                  {report.id} // EVIDENCE FRAME
+                </div>
+              </div>
+            ) : null}
             <p className="mt-2 text-xs font-mono text-[#8e8e93] bg-[#18181f] p-2.5 rounded border border-[#24242c]">
               🔍 <strong className="text-[#d4d4d8]">Recorded Evidence:</strong>{" "}
               {report.evidenceDescription}

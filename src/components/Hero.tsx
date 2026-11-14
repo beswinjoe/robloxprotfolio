@@ -1,94 +1,107 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Code2, ShieldAlert, Sparkles, Terminal } from "lucide-react";
+import { ArrowDown, Code2, ShieldAlert, Sparkles, Terminal, Play, Users, Trophy } from "lucide-react";
 import { PORTFOLIO_HERO } from "@/data/portfolioData";
 
 export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[88vh] items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden"
     >
-      {/* Subtle fine grid pattern background */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.035]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        {/* Availability / Position Pill */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#151518] px-3.5 py-1 text-xs text-[#a1a1aa] mb-8">
-          <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
-          <span className="font-mono text-[11px] uppercase tracking-wider text-[#d4d4d8]">
-            Beswin Joe • @beswinjee
+      <div className="text-center max-w-4xl mx-auto space-y-6">
+        {/* Availability Badge */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#27272a] bg-[#141418] px-4 py-1.5 text-xs text-[#a1a1aa] shadow-sm">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
           </span>
-          <span className="text-[#52525b]">•</span>
-          <span className="text-[11px] text-[#9ca3af]">Roblox Studio QA & Systems</span>
+          <span className="font-mono text-[11px] font-bold text-white tracking-wide">
+            BESWIN JOE • @beswinjee
+          </span>
+          <span className="text-[#52525b]">|</span>
+          <span className="text-[11px] text-emerald-400 font-medium">Available for Hire</span>
         </div>
 
-        {/* Name & Title */}
+        {/* Main Name & Title */}
         <div className="space-y-3">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white font-sans">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white font-sans uppercase">
             BESWIN JOE
           </h1>
-          <p className="text-lg sm:text-xl font-medium tracking-wide text-[#a1a1aa] uppercase font-mono">
-            Roblox Developer & QA Tester
+          <p className="text-lg sm:text-2xl font-bold tracking-wide text-[#00a2ff] font-sans">
+            Roblox Luau Scripter & Game QA Tester
           </p>
         </div>
 
-        {/* Core Statement */}
-        <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-[#d1d5db] leading-relaxed font-sans font-normal">
+        {/* Tagline */}
+        <p className="mx-auto max-w-2xl text-base sm:text-lg text-[#d1d5db] leading-relaxed font-normal">
           &ldquo;{PORTFOLIO_HERO.tagline}&rdquo;
         </p>
 
-        {/* Key Pillars */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-mono text-[#a1a1aa]">
-          <span className="rounded border border-[#26262b] bg-[#141417] px-3 py-1.5 flex items-center gap-1.5">
-            <Code2 className="h-3.5 w-3.5 text-[#e2b053]" />
-            Luau Scripting
-          </span>
-          <span className="rounded border border-[#26262b] bg-[#141417] px-3 py-1.5 flex items-center gap-1.5">
-            <Terminal className="h-3.5 w-3.5 text-[#38bdf8]" />
-            Gameplay Systems
-          </span>
-          <span className="rounded border border-[#26262b] bg-[#141417] px-3 py-1.5 flex items-center gap-1.5">
-            <ShieldAlert className="h-3.5 w-3.5 text-amber-500" />
-            Game QA Testing
-          </span>
-          <span className="rounded border border-[#26262b] bg-[#141417] px-3 py-1.5 flex items-center gap-1.5">
-            <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
-            Bug Diagnostics
-          </span>
-        </div>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
+          <Link
+            href="#qa-testing"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#0055ff] hover:bg-[#1a66ff] px-7 py-3 text-sm font-bold text-white transition-all shadow-lg shadow-blue-900/30 active:scale-95"
+          >
+            <Play className="h-4 w-4 fill-current" />
+            <span>View Games Tested</span>
+          </Link>
 
-        {/* CTA Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <Link
             href="#development"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border border-[#e2b053] bg-[#e2b053] px-6 py-2.5 text-sm font-semibold text-black transition-all hover:bg-[#d69f3d]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-[#2c2c34] bg-[#16161b] hover:bg-[#202028] px-7 py-3 text-sm font-bold text-white transition-all hover:border-[#444452] active:scale-95"
           >
-            <span>View My Work</span>
-            <ArrowDown className="h-4 w-4" />
+            <Code2 className="h-4 w-4 text-[#e2b053]" />
+            <span>Scripting Systems</span>
           </Link>
 
           <Link
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border border-[#2e2e33] bg-[#18181c] px-6 py-2.5 text-sm font-medium text-white transition-all hover:border-[#4d4d55] hover:bg-[#222227]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-[#2c2c34] bg-[#121215] hover:bg-[#1b1b20] px-6 py-3 text-sm font-medium text-[#d4d4d8] transition-all"
           >
             <span>Contact Me</span>
           </Link>
         </div>
+      </div>
 
-        {/* Micro-statement on authenticity */}
-        <p className="mt-8 text-[11px] font-mono text-[#71717a]">
-          Verified testing records • Authentic bug reports • Production-focused Luau architecture
-        </p>
+      {/* Featured Showcase Banner (from Image 11: Do Not Stop, Clean all the...) */}
+      <div className="mt-14 rounded-2xl border border-[#27272e] bg-[#141418] p-4 sm:p-6 overflow-hidden shadow-2xl">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400">
+              <Trophy className="h-4 w-4" />
+              <span>TESTED & ASSISTED ROBLOX EXPERIENCES</span>
+            </div>
+            <h3 className="text-base sm:text-lg font-bold text-white mt-0.5">
+              High-Traffic Studios & Community Highlights
+            </h3>
+          </div>
+          <div className="flex items-center gap-3 text-xs font-mono">
+            <span className="rounded-lg bg-[#1c1c24] px-3 py-1.5 text-white border border-[#2d2d38] font-bold">
+              👥 30K+ Concurrent Peak
+            </span>
+            <span className="rounded-lg bg-emerald-500/10 text-emerald-400 px-3 py-1.5 border border-emerald-500/20 font-bold">
+              ▶ 250M+ Total Plays
+            </span>
+          </div>
+        </div>
+
+        {/* Featured Image */}
+        <div className="relative aspect-[21/9] sm:aspect-[24/9] w-full overflow-hidden rounded-xl border border-[#222228]">
+          <Image
+            src="/games/featured-showcase.jpg"
+            alt="Roblox Games Showcase"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+            unoptimized
+          />
+        </div>
       </div>
     </section>
   );

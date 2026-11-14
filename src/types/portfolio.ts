@@ -26,12 +26,17 @@ export interface BugReport {
   category: "Physics" | "Replication" | "UI/UX" | "Economy" | "Logic" | "Mobile";
   affectedPlatform?: string[];
   dateReported?: string;
+  image?: string;
 }
 
 export interface QARecord {
   id: string;
   gameName: string;
   developer?: string;
+  verifiedDeveloper?: boolean;
+  maturity?: string;
+  likes?: number;
+  dislikes?: number;
   category: TestingCategory;
   testingDate?: string;
   testingSummary: string;
@@ -43,6 +48,8 @@ export interface QARecord {
   evidenceNotes?: string;
   genre: string;
   verified: boolean;
+  image: string;
+  visits?: string;
 }
 
 export interface ScriptingProject {
@@ -55,6 +62,7 @@ export interface ScriptingProject {
   developmentDetails: string;
   projectStatus: string;
   isPlaceholderNotice: boolean;
+  image?: string;
   codeSnippetPreview?: {
     filename: string;
     code: string;
