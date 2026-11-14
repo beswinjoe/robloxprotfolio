@@ -21,7 +21,7 @@ export const PORTFOLIO_HERO = {
 export const PORTFOLIO_STATS: PortfolioStatistic[] = [
   {
     label: "Games Tested",
-    value: "15",
+    value: "20+",
     subtext: "Documented testing records",
     verifiedStatus: "Documented",
   },
@@ -111,6 +111,12 @@ export const GALLERY_GAMES = [
     title: "Beats to Get Rich",
     studio: "Sound Tycoon Games",
     image: "/games/thumbs/beats-to-get-rich.jpg",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "Silent Killer Simulator",
+    studio: "RomeX Labs",
+    image: "/games/thumbs/silent-killer-simulator.jpg",
     category: "Paid Studio QA",
   },
 ];
@@ -291,6 +297,22 @@ export const QA_RECORDS: QARecord[] = [
     focusAreas: ["Sound Sync", "Economy", "AI Pathfinding"],
     evidenceAvailable: true,
     genre: "Tycoon",
+    verified: true,
+  },
+  {
+    id: "qa-12",
+    gameName: "Silent Killer Simulator",
+    developer: "RomeX Labs",
+    verifiedDeveloper: true,
+    category: "Paid Testing",
+    image: "/games/thumbs/silent-killer-simulator.jpg",
+    testingSummary: "Stealth mechanics, hit detection with suppressed weaponry, and player bounty progression.",
+    bugsDiscoveredCount: 4,
+    keyBugsHighlight: ["Suppressed projectile raycast tunneling through thin barrier walls"],
+    gameplayFeedback: "Implement multi-frame continuous collision detection on fast-moving projectiles.",
+    focusAreas: ["Stealth", "Ballistics", "Hit Registration"],
+    evidenceAvailable: true,
+    genre: "Action / Stealth",
     verified: true,
   },
 ];

@@ -55,6 +55,7 @@ const directUploads = [
   { file: 'beam-and-steal-an-egg.jpg', upload: 'media_1794675177675_d756fe27.jpg' },
   { file: 'one-piece-farm.jpg', upload: 'media_1794675237837_0f996e3e.jpg' },
   { file: 'beats-to-get-rich.jpg', upload: 'media_1794675344521_34e582cd.jpg' },
+  { file: 'silent-killer-simulator.jpg', upload: 'media_1794681542808_f5799977.jpg' },
 ];
 
 async function run() {
