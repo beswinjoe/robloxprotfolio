@@ -72,20 +72,12 @@ async function run() {
     .toFile(path.join(outDir, 'miami-crime-rp.jpg'));
   console.log('Generated Miami Crime RP poster: 1024x579');
 
-  // 3. Become the Farmer: Crystal clear, de-hazed, 16:9 crop removing video UI
-  const farmerInput = path.join(srcDir, 'become-the-farmer.jpg');
+  // 3. Become the Farmer: Official high-res game banner from user upload
+  const farmerInput = path.join(userUploadsDir, 'media_1794674958834_17539601.jpg');
   await sharp(farmerInput)
-    .extract({ left: 88, top: 16, width: 524, height: 295 })
-    .resize(800, 450, { kernel: sharp.kernel.lanczos3 })
-    .modulate({
-      brightness: 1.08,
-      saturation: 1.4,
-    })
-    .linear(1.3, -24)
-    .sharpen({ sigma: 1.6, m1: 1.4, m2: 0.6 })
     .jpeg({ quality: 95 })
     .toFile(path.join(outDir, 'become-the-farmer.jpg'));
-  console.log('Generated crystal clear Become the Farmer thumbnail: 800x450');
+  console.log('Generated official Become the Farmer thumbnail: 1024x574');
 
   console.log('All 8 pure thumbnails processed successfully!');
 }
