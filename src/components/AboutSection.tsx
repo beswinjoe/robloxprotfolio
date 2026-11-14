@@ -1,5 +1,5 @@
 import React from "react";
-import { Shield, Target, Cpu, CheckCircle } from "lucide-react";
+import { Shield, Target, Cpu } from "lucide-react";
 
 export const AboutSection: React.FC = () => {
   return (

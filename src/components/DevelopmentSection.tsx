@@ -49,7 +49,7 @@ export const DevelopmentSection: React.FC = () => {
                     />
                     <div className="absolute top-3 left-3">
                       <span className="rounded-full bg-slate-900/80 backdrop-blur-xs px-3 py-1 text-[11px] font-semibold text-white">
-                        0{index + 1} // Contribution
+                        {`0${index + 1} // Contribution`}
                       </span>
                     </div>
                   </div>

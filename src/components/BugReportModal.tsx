@@ -6,12 +6,10 @@ import { BugReport } from "@/types/portfolio";
 import {
   X,
   AlertOctagon,
-  AlertTriangle,
   CheckCircle2,
   Copy,
   Check,
   Cpu,
-  Monitor,
 } from "lucide-react";
 
 interface BugReportModalProps {
@@ -136,7 +134,7 @@ Suggested Improvement: ${report.suggestedImprovement}`;
                 unoptimized
               />
               <div className="absolute top-3 left-3 rounded-md bg-white/95 px-2.5 py-1 text-[11px] font-mono font-bold text-rose-600 border border-gray-200 shadow-xs">
-                {report.id} // VERIFIED EVIDENCE
+                {`${report.id} // VERIFIED EVIDENCE`}
               </div>
             </div>
           )}

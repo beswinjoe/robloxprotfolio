@@ -9,7 +9,6 @@ import {
   Copy,
   Check,
   Send,
-  ExternalLink,
   ShieldCheck,
   ArrowUpRight,
 } from "lucide-react";
