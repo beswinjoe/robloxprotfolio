@@ -107,6 +107,12 @@ export const GALLERY_GAMES = [
     image: "/games/thumbs/one-piece-farm.jpg",
     category: "Community QA",
   },
+  {
+    title: "Beats to Get Rich",
+    studio: "Sound Tycoon Games",
+    image: "/games/thumbs/beats-to-get-rich.jpg",
+    category: "Paid Studio QA",
+  },
 ];
 
 // Games Tested - ONLY real thumbnail games, no blank placeholders!
@@ -269,6 +275,22 @@ export const QA_RECORDS: QARecord[] = [
     focusAreas: ["Concurrency", "Boss Raids"],
     evidenceAvailable: true,
     genre: "Anime / RPG",
+    verified: true,
+  },
+  {
+    id: "qa-11",
+    gameName: "Beats to Get Rich",
+    developer: "Sound Tycoon Games",
+    verifiedDeveloper: true,
+    category: "Paid Testing",
+    image: "/games/thumbs/beats-to-get-rich.jpg",
+    testingSummary: "Audio playback sync, NPC queue pathfinding, and cash multiplier progression.",
+    bugsDiscoveredCount: 4,
+    keyBugsHighlight: ["Customer queue pathfinding deadlock when conveyor speeds overflow"],
+    gameplayFeedback: "Add spatial audio throttling on rapid key beat triggers.",
+    focusAreas: ["Sound Sync", "Economy", "AI Pathfinding"],
+    evidenceAvailable: true,
+    genre: "Tycoon",
     verified: true,
   },
 ];
