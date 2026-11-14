@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { CONTACT_INFO, PORTFOLIO_HERO } from "@/data/portfolioData";
 import {
   Mail,
@@ -137,8 +138,15 @@ export const ContactSection: React.FC = () => {
           {/* Roblox Profile */}
           <div className="rounded-2xl border border-gray-200/90 bg-white p-4 sm:p-5 flex items-center justify-between shadow-2xs hover:shadow-md transition-all">
             <div className="flex items-center gap-3.5">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold text-xs">
-                R
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-rose-50/70 border border-rose-100 p-1.5 shadow-2xs">
+                <Image
+                  src="/logo.png"
+                  alt="Beswin Joe Logo"
+                  width={30}
+                  height={30}
+                  className="h-7 w-7 object-contain"
+                  unoptimized
+                />
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-400">Roblox Profile</div>

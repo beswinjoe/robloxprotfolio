@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export const Navbar: React.FC = () => {
@@ -36,8 +37,18 @@ export const Navbar: React.FC = () => {
         {/* Logo: Beswin Joe . */}
         <Link
           href="#hero"
-          className="group flex items-center text-left transition-opacity hover:opacity-90"
+          className="group flex items-center gap-2.5 text-left transition-opacity hover:opacity-90"
         >
+          <div className="relative h-8 w-8 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
+            <Image
+              src="/logo.png"
+              alt="Beswin Joe Logo"
+              fill
+              sizes="32px"
+              className="object-contain"
+              unoptimized
+            />
+          </div>
           <span className="text-xl font-bold tracking-tight text-slate-900 font-sans">
             Beswin Joe<span className="text-rose-500 font-black">.</span>
           </span>

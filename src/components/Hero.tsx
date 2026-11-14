@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 export const Hero: React.FC = () => {
@@ -11,10 +12,17 @@ export const Hero: React.FC = () => {
         {/* Left Column: Pill & Headline */}
         <div className="lg:col-span-7 space-y-5">
           {/* Tag / Pill */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-gray-200/80 bg-gray-50/70 px-3.5 py-1 text-xs font-medium text-slate-700 shadow-2xs">
-            <span className="flex h-3.5 w-3.5 items-center justify-center rounded-xs bg-slate-900 text-[9px] font-bold text-white">
-              R
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-gray-200/80 bg-gray-50/70 pl-2 pr-3.5 py-1 text-xs font-medium text-slate-700 shadow-2xs">
+            <div className="relative h-4.5 w-4.5 shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                fill
+                sizes="18px"
+                className="object-contain"
+                unoptimized
+              />
+            </div>
             <span>Roblox Developer & QA Tester</span>
           </div>
 

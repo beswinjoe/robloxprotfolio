@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     description:
       "Roblox Luau Scripter, Gameplay Systems Developer, and Game QA Tester.",
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export const viewport: Viewport = {

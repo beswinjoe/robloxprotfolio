@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import { PORTFOLIO_HERO } from "@/data/portfolioData";
 
@@ -9,7 +10,17 @@ export const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand */}
         <div className="space-y-1 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-1.5">
+          <div className="flex items-center justify-center md:justify-start gap-2">
+            <div className="relative h-6 w-6 shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Beswin Joe Logo"
+                fill
+                sizes="24px"
+                className="object-contain"
+                unoptimized
+              />
+            </div>
             <span className="text-base font-bold text-slate-950 font-sans">
               Beswin Joe<span className="text-rose-500 font-black">.</span>
             </span>
