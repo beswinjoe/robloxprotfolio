@@ -31,9 +31,13 @@ export const metadata: Metadata = {
       "Roblox Luau Scripter, Gameplay Systems Developer, and Game QA Tester.",
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico?v=2" },
+      { url: "/icon.png?v=2", type: "image/png" },
+      { url: "/logo.png?v=2", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico?v=2",
+    apple: "/apple-icon.png?v=2",
   },
 };
 
@@ -49,6 +53,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth bg-white text-slate-900">
+      <head>
+        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+        <link rel="icon" type="image/png" href="/icon.png?v=2" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=2" />
+      </head>
       <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-rose-500 selection:text-white">
         {children}
       </body>
