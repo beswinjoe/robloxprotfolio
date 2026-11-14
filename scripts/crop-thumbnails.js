@@ -12,13 +12,6 @@ if (!fs.existsSync(outDir)) {
 
 const crops = [
   {
-    file: 'run-a-dry-cleaner.jpg',
-    left: 4,
-    top: 0,
-    width: 666,
-    height: 376,
-  },
-  {
     file: 'dont-wake-up-the-baby.jpg',
     left: 21,
     top: 30,
@@ -55,8 +48,16 @@ const crops = [
   },
 ];
 
+const directUploads = [
+  { file: 'run-a-dry-cleaner.jpg', upload: 'media_1794675065859_c14bdb87.jpg' },
+  { file: 'miami-crime-rp.jpg', upload: 'media_1794667458812_6558e5f5.jpg' },
+  { file: 'become-the-farmer.jpg', upload: 'media_1794674958834_17539601.jpg' },
+  { file: 'beam-and-steal-an-egg.jpg', upload: 'media_1794675177675_d756fe27.jpg' },
+  { file: 'one-piece-farm.jpg', upload: 'media_1794675237837_0f996e3e.jpg' },
+];
+
 async function run() {
-  // 1. Standard game artwork crops
+  // 1. Cropped artwork
   for (const c of crops) {
     const inputPath = path.join(srcDir, c.file);
     const outputPath = path.join(outDir, c.file);
@@ -66,20 +67,15 @@ async function run() {
     console.log(`Generated thumbnail for ${c.file}: ${c.width}x${c.height}`);
   }
 
-  // 2. Miami Crime RP: High-res cinematic poster from user upload
-  const miamiPoster = path.join(userUploadsDir, 'media_1794667458812_6558e5f5.jpg');
-  await sharp(miamiPoster)
-    .toFile(path.join(outDir, 'miami-crime-rp.jpg'));
-  console.log('Generated Miami Crime RP poster: 1024x579');
+  // 2. Direct high-res uploads
+  for (const d of directUploads) {
+    const inputPath = path.join(userUploadsDir, d.upload);
+    const outputPath = path.join(outDir, d.file);
+    await sharp(inputPath).jpeg({ quality: 95 }).toFile(outputPath);
+    console.log(`Saved direct high-res banner for ${d.file}`);
+  }
 
-  // 3. Become the Farmer: Official high-res game banner from user upload
-  const farmerInput = path.join(userUploadsDir, 'media_1794674958834_17539601.jpg');
-  await sharp(farmerInput)
-    .jpeg({ quality: 95 })
-    .toFile(path.join(outDir, 'become-the-farmer.jpg'));
-  console.log('Generated official Become the Farmer thumbnail: 1024x574');
-
-  console.log('All 8 pure thumbnails processed successfully!');
+  console.log('All 10 game thumbnails processed successfully!');
 }
 
 run().catch(console.error);
