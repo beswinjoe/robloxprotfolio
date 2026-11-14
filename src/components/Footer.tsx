@@ -26,11 +26,11 @@ export const Footer: React.FC = () => {
           <Link href="#hero" className="hover:text-slate-950 transition-colors">
             Home
           </Link>
-          <Link href="#development" className="hover:text-slate-950 transition-colors">
-            Development
-          </Link>
           <Link href="#qa-testing" className="hover:text-slate-950 transition-colors">
             QA Testing
+          </Link>
+          <Link href="#bug-reports" className="hover:text-slate-950 transition-colors">
+            Bug Reports
           </Link>
           <Link href="#gallery" className="hover:text-slate-950 transition-colors">
             Games

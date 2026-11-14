@@ -5,7 +5,6 @@ import { GameGalleryCarousel } from "@/components/GameGalleryCarousel";
 import { Stats } from "@/components/Stats";
 import { QATestingSection } from "@/components/QATestingSection";
 import { BugReportSystem } from "@/components/BugReportSystem";
-import { DevelopmentSection } from "@/components/DevelopmentSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -33,10 +32,7 @@ export default function Home() {
         {/* 6. Documented Bug Reports & Reproducible Case Studies */}
         <BugReportSystem />
 
-        {/* 7. Luau Gameplay Scripting & Systems Development */}
-        <DevelopmentSection />
-
-        {/* 8. Technical Skills Matrix */}
+        {/* 7. Technical Skills Matrix */}
         <SkillsSection />
 
         {/* 9. Background & Methodology */}

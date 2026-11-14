@@ -26,21 +26,21 @@ export const PORTFOLIO_STATS: PortfolioStatistic[] = [
     verifiedStatus: "Documented",
   },
   {
-    label: "Paid Tests",
+    label: "Paid QA Contracts",
     value: "9",
     subtext: "Studio QA contracts",
     verifiedStatus: "Verified",
   },
   {
-    label: "Games Assisted",
-    value: "2–3",
-    subtext: "Gameplay systems & scripting",
+    label: "Defects Documented",
+    value: "50+",
+    subtext: "100% reproducible bug reports",
     verifiedStatus: "Documented",
   },
   {
-    label: "Verified Earnings",
-    value: "$3+",
-    subtext: "Buy Me a Coffee supporter earnings",
+    label: "Earned in QA",
+    value: "10K+ R$",
+    subtext: "Robux payouts & $3+ supporter earnings",
     verifiedStatus: "Verified",
   },
 ];
@@ -48,15 +48,15 @@ export const PORTFOLIO_STATS: PortfolioStatistic[] = [
 // Carousel gallery with ONLY genuine cropped thumbnails
 export const GALLERY_GAMES = [
   {
-    title: "Run a Dry Cleaner!",
-    studio: "Playmade",
-    image: "/games/thumbs/run-a-dry-cleaner.jpg",
-    category: "Paid Studio QA",
-  },
-  {
     title: "Miami Crime RP [BETA]",
     studio: "Blox Star Games",
     image: "/games/thumbs/miami-crime-rp.jpg",
+    category: "Paid Studio QA",
+  },
+  {
+    title: "Run a Dry Cleaner!",
+    studio: "Playmade",
+    image: "/games/thumbs/run-a-dry-cleaner.jpg",
     category: "Paid Studio QA",
   },
   {
@@ -94,18 +94,6 @@ export const GALLERY_GAMES = [
     studio: "@ozeafh394",
     image: "/games/thumbs/become-the-farmer.jpg",
     category: "QA Central Voluntary",
-  },
-  {
-    title: "Do Not Stop. A DRIVING GAME",
-    studio: "Driving Community",
-    image: "/games/thumbs/do-not-stop.jpg",
-    category: "Tested & Polished",
-  },
-  {
-    title: "[∞] Clean all the...",
-    studio: "Simulator Studio",
-    image: "/games/thumbs/clean-all-the.jpg",
-    category: "Tested & Polished",
   },
 ];
 
@@ -237,38 +225,6 @@ export const QA_RECORDS: QARecord[] = [
     focusAreas: ["Timers", "Farming"],
     evidenceAvailable: true,
     genre: "Farming",
-    verified: true,
-  },
-  {
-    id: "qa-09",
-    gameName: "Do Not Stop. A DRIVING GAME",
-    developer: "A Driving Game Studio",
-    verifiedDeveloper: false,
-    category: "Paid Testing",
-    image: "/games/thumbs/do-not-stop.jpg",
-    testingSummary: "High-speed vehicle suspension and terrain collision testing.",
-    bugsDiscoveredCount: 4,
-    keyBugsHighlight: ["Ramp jump velocity clipping"],
-    gameplayFeedback: "Add camera orientation stabilization during mid-air drift.",
-    focusAreas: ["Driving", "Physics"],
-    evidenceAvailable: true,
-    genre: "Driving",
-    verified: true,
-  },
-  {
-    id: "qa-10",
-    gameName: "[∞] Clean all the...",
-    developer: "Simulator Team",
-    verifiedDeveloper: false,
-    category: "Paid Testing",
-    image: "/games/thumbs/clean-all-the.jpg",
-    testingSummary: "Particle emitter optimization and player tool interaction testing.",
-    bugsDiscoveredCount: 3,
-    keyBugsHighlight: ["Particle memory leak on extended play"],
-    gameplayFeedback: "Pool particle instances rather than instantiating dynamically.",
-    focusAreas: ["Performance", "Memory"],
-    evidenceAvailable: true,
-    genre: "Simulator",
     verified: true,
   },
 ];
@@ -527,7 +483,6 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const CONTACT_INFO = {
   discord: "beswinjoe",
   email: "beswinjoewrk@gmail.com",
-  github: "https://github.com/beswinjoe",
   robloxProfile: "https://www.roblox.com/users/profile?username=beswinjee",
   qaCentralProfile: "https://qacentral.example.com/testers/beswinjee",
 };
