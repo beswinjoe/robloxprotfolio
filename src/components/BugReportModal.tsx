@@ -69,7 +69,7 @@ Suggested Improvement: ${report.suggestedImprovement}`;
         {/* Topbar */}
         <div className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-100 bg-white/95 px-6 py-4 backdrop-blur-sm">
           <div className="flex items-center gap-3">
-            <span className="font-mono text-xs font-bold text-slate-900">
+            <span className="font-sans text-xs font-bold text-slate-900">
               {report.id}
             </span>
             <span className="text-gray-300">•</span>
@@ -133,7 +133,7 @@ Suggested Improvement: ${report.suggestedImprovement}`;
                 className="object-cover object-left"
                 unoptimized
               />
-              <div className="absolute top-3 left-3 rounded-md bg-white/95 px-2.5 py-1 text-[11px] font-mono font-bold text-rose-600 border border-gray-200 shadow-xs">
+              <div className="absolute top-3 left-3 rounded-md bg-white/95 px-2.5 py-1 text-[11px] font-sans font-bold text-rose-600 border border-gray-200 shadow-xs">
                 {`${report.id} // VERIFIED EVIDENCE`}
               </div>
             </div>
@@ -147,7 +147,7 @@ Suggested Improvement: ${report.suggestedImprovement}`;
             <ol className="space-y-2 text-xs sm:text-sm text-slate-700">
               {report.stepsToReproduce.map((step, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white font-mono text-[11px] font-bold text-slate-900 border border-gray-200 shadow-2xs">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white font-sans text-[11px] font-bold text-slate-900 border border-gray-200 shadow-2xs">
                     {idx + 1}
                   </span>
                   <span className="leading-relaxed pt-0.5">{step}</span>

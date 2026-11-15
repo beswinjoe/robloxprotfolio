@@ -80,7 +80,7 @@ export const ContactSection: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-400">Discord</div>
-                <div className="text-sm font-bold font-mono text-slate-950">
+                <div className="text-sm font-bold font-sans text-slate-950">
                   {CONTACT_INFO.discord}
                 </div>
               </div>

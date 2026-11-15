@@ -108,7 +108,7 @@ export const BugReportSystem: React.FC = () => {
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div className="space-y-2 max-w-3xl">
                 <div className="flex flex-wrap items-center gap-2 text-xs">
-                  <span className="font-mono font-bold text-slate-950">
+                  <span className="font-sans font-bold text-slate-950">
                     {report.id}
                   </span>
                   <span className="text-gray-300">•</span>

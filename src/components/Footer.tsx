@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
               Beswin Joe<span className="text-rose-500 font-black">.</span>
             </span>
             <span className="text-gray-300">•</span>
-            <span className="font-mono text-slate-500">@{PORTFOLIO_HERO.username}</span>
+            <span className="font-sans text-slate-500">@{PORTFOLIO_HERO.username}</span>
           </div>
           <p className="text-xs text-slate-500 max-w-sm">
             Roblox Developer & QA Tester. Building solid gameplay systems and executing thorough QA audits.

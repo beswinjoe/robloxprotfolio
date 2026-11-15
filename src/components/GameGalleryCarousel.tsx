@@ -54,7 +54,7 @@ export const GameGalleryCarousel: React.FC = () => {
 
                 {/* Subtle bottom gradient & info overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
-                  <div className="text-xs font-semibold text-rose-300 font-mono">
+                  <div className="text-xs font-semibold text-rose-300 font-sans">
                     {game.category}
                   </div>
                   <div className="text-sm font-bold tracking-tight text-white leading-tight">

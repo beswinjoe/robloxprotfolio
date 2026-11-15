@@ -656,7 +656,7 @@ export const RobloxGameFrame: React.FC<RobloxGameFrameProps> = ({
 
   return (
     <div
-      className={`relative w-full overflow-hidden rounded-lg border border-[#27272a] bg-[#121214] font-mono text-xs select-none ${className}`}
+      className={`relative w-full overflow-hidden rounded-lg border border-[#27272a] bg-[#121214] font-sans text-xs select-none ${className}`}
     >
       {/* Roblox Topbar Emulation */}
       <div className="flex h-8 items-center justify-between border-b border-[#222225] bg-[#141518] px-3 text-[#9ca3af]">
