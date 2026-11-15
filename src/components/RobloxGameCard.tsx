@@ -30,7 +30,20 @@ export const RobloxGameCard: React.FC<RobloxGameCardProps> = ({ record }) => {
         </h3>
         {record.developer && (
           <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">
-            {record.developer}
+            {record.developerUrl ? (
+              <a
+                href={record.developerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-rose-600 transition-colors inline-flex items-center gap-1"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <span>By {record.developer}</span>
+                <span className="text-[10px] opacity-70">↗</span>
+              </a>
+            ) : (
+              `By ${record.developer}`
+            )}
           </p>
         )}
       </div>

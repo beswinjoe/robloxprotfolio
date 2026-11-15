@@ -33,6 +33,7 @@ export interface QARecord {
   id: string;
   gameName: string;
   developer?: string;
+  developerUrl?: string;
   verifiedDeveloper?: boolean;
   maturity?: string;
   likes?: number;
