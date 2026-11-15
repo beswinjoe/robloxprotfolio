@@ -1,5 +1,38 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const plusJakartaSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/plus-jakarta-sans-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/plus-jakarta-sans-500.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/plus-jakarta-sans-600.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/plus-jakarta-sans-700.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/plus-jakarta-sans-800.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Beswin Joe — Roblox Developer & QA Tester",
@@ -52,13 +85,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth bg-white text-slate-900">
+    <html
+      lang="en"
+      className={`scroll-smooth bg-white text-slate-900 ${plusJakartaSans.variable} ${plusJakartaSans.className}`}
+    >
       <head>
         <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
         <link rel="icon" type="image/png" href="/icon.png?v=2" />
         <link rel="apple-touch-icon" href="/apple-icon.png?v=2" />
       </head>
-      <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-rose-500 selection:text-white">
+      <body
+        className={`min-h-screen bg-white text-slate-900 antialiased selection:bg-rose-500 selection:text-white ${plusJakartaSans.className}`}
+      >
         {children}
       </body>
     </html>
